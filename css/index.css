@@ -31,6 +31,7 @@ img, .intro-img, .carousel-img {
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: all 0.3s ease-in-out;
+    font-display: swap;
 }
   
 .custom-navbar .nav-link:hover {
@@ -95,6 +96,7 @@ img, .intro-img, .carousel-img {
     color: #00ffe0;
     margin-bottom: 20px;
     font-family: 'Orbitron', sans-serif;
+    font-display: swap;
 }
   
 .intro-text {
@@ -102,6 +104,7 @@ img, .intro-img, .carousel-img {
     line-height: 1.6;
     font-family: 'Orbitron', sans-serif;
     color: #bbbbbb;
+    font-display: swap;
 }
   
 .intro-img {
@@ -120,6 +123,7 @@ img, .intro-img, .carousel-img {
     text-shadow: 0 0 10px #00ffe0;
     margin-bottom: 2rem;
     font-family: 'Orbitron', sans-serif;
+    font-display: swap;
 }
   
   
@@ -139,6 +143,7 @@ img, .intro-img, .carousel-img {
     line-height: 1.6;
     text-shadow: 0 0 5px #00ffe0;
     font-family: 'Orbitron', sans-serif;
+    font-display: swap;
     max-width: 600px; /* O anche meno, es. 600px */
     margin-left: auto; /* Centra il testo all'interno del box */
     margin-right: auto; /* Centra il testo all'interno del box */
@@ -157,6 +162,7 @@ img, .intro-img, .carousel-img {
 .skill-label {
     color: #bbbbbb;
     font-family: 'Orbitron', sans-serif;
+    font-display: swap;
     font-size: 1rem;
     margin-bottom: 5px;
     display: inline-block;
@@ -175,6 +181,7 @@ img, .intro-img, .carousel-img {
   
 .category-title {
     font-family: 'Orbitron', sans-serif;
+    font-display: swap;
     font-size: 1.5rem;
     margin-bottom: 1rem;
     text-align: center;
@@ -187,6 +194,7 @@ img, .intro-img, .carousel-img {
     align-items: center;
     margin-bottom: 1rem;
     font-family: 'Orbitron', sans-serif;
+    font-display: swap;
     font-size: 1.1rem;
 }
   
@@ -231,6 +239,7 @@ img, .intro-img, .carousel-img {
   
 .progress-bar {
     font-family: 'Orbitron', sans-serif;
+    font-display: swap;
     font-size: 0.9rem;
     line-height: 25px;
     text-align: right;
@@ -263,6 +272,7 @@ img, .intro-img, .carousel-img {
 .carousel-title {
     color: #00ffe0;
     font-family: 'Orbitron', sans-serif;
+    font-display: swap;
     font-size: 2rem;
     text-shadow: 0 0 10px #00ffe0;
 }
@@ -283,6 +293,7 @@ img, .intro-img, .carousel-img {
     margin-top: 10px;
     padding: 12px 28px;
     font-family: 'Orbitron', sans-serif;
+    font-display: swap;
     background-color: #00ffe0;
     border: none;
     color: #111827;
@@ -309,6 +320,7 @@ img, .intro-img, .carousel-img {
 .caia-text {
     color: #bbbbbb;
     font-family: 'Orbitron', sans-serif;
+    font-display: swap;
     font-size: 1rem;
     text-shadow: 0 0 5px #00ffe0aa;
 }
@@ -318,6 +330,7 @@ img, .intro-img, .carousel-img {
     text-decoration: none;
     transition: color 0.3s ease, transform 0.3s ease;
     font-family: 'Orbitron', sans-serif;
+    font-display: swap;
 }
   
 .footer a:hover {
