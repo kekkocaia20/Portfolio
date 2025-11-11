@@ -1,9 +1,12 @@
-Ho realizzato un sito portfolio personale utilizzando HTML, CSS e Bootstrap, con l'obiettivo di presentarmi in modo semplice e professionale online. Il sito è suddiviso in tre sezioni principali:
+🌐 Descrizione del progetto – Portfolio Personale
 
--About Me: una breve introduzione su chi sono, il mio percorso e i miei interessi nel campo dello sviluppo web.
+Ho realizzato un sito portfolio personale utilizzando HTML, CSS e Bootstrap, con l’obiettivo di presentare in modo semplice e professionale le mie competenze e i progetti sviluppati.
+Il sito è strutturato in tre sezioni principali:
 
--Skills: una panoramica delle competenze tecniche acquisite, con particolare attenzione agli strumenti e linguaggi che utilizzo.
+Home: introduce il sito e guida la navigazione tra le diverse sezioni.
 
--Work: una selezione dei progetti realizzati, per mostrare in modo concreto le mie capacità.
+Skills: offre una panoramica delle competenze tecniche acquisite, con particolare attenzione agli strumenti e linguaggi che utilizzo nello sviluppo web.
 
-Il sito è responsive e ottimizzato per essere visualizzato su diversi dispositivi. Sarà pubblicato online su un dominio personale per essere facilmente accessibile da recruiter, collaboratori o potenziali clienti.
+Projects: presenta una selezione dei progetti realizzati, per mostrare in modo concreto le mie capacità e l’esperienza maturata.
+
+Il sito è completamente responsive 📱💻 e ottimizzato per la visualizzazione su diversi dispositivi.
