@@ -7,12 +7,12 @@ html, body {
     background-color: #111;
 }
 
-img, .intro-img, .carousel-img {
+img, .intro-img {
     max-width: 100%;
     height: auto;
     display: block;
 }
-  
+
 /* Navbar tech */
 .custom-navbar {
     background-color: #111;
@@ -22,7 +22,7 @@ img, .intro-img, .carousel-img {
     z-index: 1030;
     box-shadow: 0 2px 10px #00ffe0;
 }
-  
+
 /* Navbar link */
 .custom-navbar .nav-link {
     font-family: 'Orbitron', sans-serif;
@@ -33,26 +33,26 @@ img, .intro-img, .carousel-img {
     transition: all 0.3s ease-in-out;
     font-display: swap;
 }
-  
+
 .custom-navbar .nav-link:hover {
     color: #ffffff;
     text-shadow: 0 0 8px #00ffe0;
 }
-  
+
 /* Centrare il menu */
 .navbar-nav {
-    display: flex !important;           /* FORZIAMO display: flex */
-    flex-direction: row !important;     /* FORZIAMO i link ad essere su una riga */
-    justify-content: center !important; /* Centra gli elementi lungo l'asse principale */
-    flex-wrap: nowrap !important;       /* Impedisce ai link di andare a capo */
-    margin: 0 auto;                     /* Mantiene la ul centrata come blocco */
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    flex-wrap: nowrap !important;
+    margin: 0 auto;
     width: 100%;    
 }
-  
+
 /* Sezioni verticali */
 .section {
     min-height: 100vh;
-    padding-top: 80px; /* padding 120px */
+    padding-top: 80px;
     padding-left: 20px;
     padding-right: 20px;
     display: flex;
@@ -61,21 +61,25 @@ img, .intro-img, .carousel-img {
     background-color: #111;
     margin-top: -1px;
 }
-  
+
 /* Titoli sezioni */
-.section h1 {
+.section h1,
+.section-title {
     font-size: 3rem;
     color: #00ffe0;
     text-shadow: 0 0 10px #00ffe0;
     margin-bottom: 1rem;
+    font-family: 'Orbitron', sans-serif;
+    font-display: swap;
+    text-align: center;
 }
-  
+
 /* Testo generico */
 .section p {
     font-size: 1.2rem;
     line-height: 1.6;
 }
-  
+
 /* Glow effetto su hover generico */
 .glow:hover {
     text-shadow: 0 0 10px #00ffe0, 0 0 20px #00ffe0;
@@ -84,13 +88,13 @@ img, .intro-img, .carousel-img {
 
 .home-content {
     min-height: 100vh;
-    padding-top: 100px; /* per evitare che tocchi la navbar */
-    padding-bottom: 80px;  /* padding 80px */
+    padding-top: 100px;
+    padding-bottom: 80px;
     display: flex;
     align-items: center;
     background-color: #111;
 }
-  
+
 .intro-title {
     font-size: 2.5rem;
     color: #00ffe0;
@@ -98,7 +102,7 @@ img, .intro-img, .carousel-img {
     font-family: 'Orbitron', sans-serif;
     font-display: swap;
 }
-  
+
 .intro-text {
     font-size: 1.2rem;
     line-height: 1.6;
@@ -106,58 +110,139 @@ img, .intro-img, .carousel-img {
     color: #bbbbbb;
     font-display: swap;
 }
-  
+
 .intro-img {
     width: 100%;
     max-width: 500px;
     height: auto;
     object-fit: contain;
-    border: 2px solid #00ffe0; /* bordo spesso 3px con il colore azzurro */
-    border-radius: 0px;         /* angoli arrotondati */
+    border: 2px solid #00ffe0;
+    border-radius: 0px;
 }
 
-.section-title {
+/* Sezione Progetti */
+.filter-buttons {
     text-align: center;
-    font-size: 3rem;
+    margin-bottom: 40px;
+  }
+  
+  .filter-btn {
+    background: transparent;
+    border: 2px solid #00ffe0;
     color: #00ffe0;
-    text-shadow: 0 0 10px #00ffe0;
-    margin-bottom: 2rem;
     font-family: 'Orbitron', sans-serif;
     font-display: swap;
-}
+    font-size: 1rem;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+  }
   
+  .filter-btn:hover,
+  .filter-btn.active {
+    background-color: #00ffe0;
+    color: #111;
+    box-shadow: 0 0 15px #00ffe0, 0 0 30px #00ffe0aa;
+  }
   
-.about-box {
+  .projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    position: relative; /* necessario per le absolute cards */
+  }
+  
+  .project-card {
+    background-color: #111;
     border: 2px solid #00ffe0;
     border-radius: 12px;
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: rgba(0, 0, 0, 0.6);
-    box-shadow: 0 0 20px #00ffe0;
-}
-
-.about-text {
-    color: #bbbbbb;
-    font-size: 1.2rem;
-    line-height: 1.6;
-    text-shadow: 0 0 5px #00ffe0;
+    box-shadow: 0 0 15px #00ffe0;
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    padding-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.4s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px #00ffe0, 0 0 40px #00ffe0aa;
+  }
+  
+  .project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 2px solid #00ffe0;
+  }
+  
+  .project-card h3 {
+    color: #00ffe0;
     font-family: 'Orbitron', sans-serif;
-    font-display: swap;
-    max-width: 600px; /* O anche meno, es. 600px */
-    margin-left: auto; /* Centra il testo all'interno del box */
-    margin-right: auto; /* Centra il testo all'interno del box */
-    text-align: left; /* Prova questo per migliorare la leggibilità */
-}
+    margin: 15px 0 10px;
+  }
+  
+  .project-card p {
+    color: #bbbbbb;
+    font-size: 0.95rem;
+    padding: 0 15px;
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  /* Effetto di fade out/in nei filtri */
+  .project-card.hidden {
+    opacity: 0;
+    transform: scale(0.95);
+    pointer-events: none;
+  }
 
+  .project-card.hide {
+    opacity: 0;
+    transform: translateY(30px);
+    pointer-events: none;
+    position: absolute; /* rimuove dal flusso */
+  }
+    
+  /* --- Animazione Cyber Reveal --- */
+@keyframes fadeSlideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px) scale(0.95);
+      box-shadow: 0 0 0 #00ffe0;
+    }
+    60% {
+      opacity: 1;
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 0 20px #00ffe0, 0 0 40px #00ffe0aa;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      box-shadow: 0 0 15px #00ffe0;
+    }
+  }
+  
+  .project-card.show {
+    animation: fadeSlideIn 0.6s ease forwards;
+  }
+  
+
+/* Glow leggero e coerente */
 .glow {
     font-family: 'Orbitron', sans-serif;
     font-size: 2rem;
     text-align: center;
-    text-shadow: 0 0 5px #00ffe0, 0 0 10px #00ffe0, 0 0 20px #00ffe0;
+    text-shadow: 0 0 5px #00ffe0, 0 0 10px #00ffe0;
     margin-bottom: 20px;
 }
-  
+
+#skills {
+    padding-bottom: 80px; /* aumenta lo spazio sotto le skill */
+}
 
 .skill-label {
     color: #bbbbbb;
@@ -173,12 +258,12 @@ img, .intro-img, .carousel-img {
     color: #00ffe0;
     box-shadow: 0 0 8px #00ffe0;
     transition: box-shadow 0.3s ease;
-  }
-  
+}
+
 .skill-category:hover {
     box-shadow: 0 0 20px #00ffe0;
 }
-  
+
 .category-title {
     font-family: 'Orbitron', sans-serif;
     font-display: swap;
@@ -188,7 +273,7 @@ img, .intro-img, .carousel-img {
     border-bottom: 1px solid #00ffe0;
     padding-bottom: 0.5rem;
 }
-  
+
 .skill-item {
     display: flex;
     align-items: center;
@@ -197,21 +282,21 @@ img, .intro-img, .carousel-img {
     font-display: swap;
     font-size: 1.1rem;
 }
-  
+
 .skill-item span {
     display: inline-block;
 }
-  
+
 .skill-item > span:first-child {
     width: 40%;
 }
-  
+
 .skill-percent {
     width: 10%;
     text-align: right;
     margin-right: 1rem;
 }
-  
+
 .skill-bar {
     width: 50%;
     background-color: #333;
@@ -219,7 +304,7 @@ img, .intro-img, .carousel-img {
     height: 10px;
     overflow: hidden;
 }
-  
+
 .skill-fill {
     background: linear-gradient(90deg, #00ffe0, #00a0b0);
     height: 100%;
@@ -236,7 +321,7 @@ img, .intro-img, .carousel-img {
     box-shadow: 0 0 10px #00ffe0;
     margin-bottom: 15px;
 }
-  
+
 .progress-bar {
     font-family: 'Orbitron', sans-serif;
     font-display: swap;
@@ -246,47 +331,12 @@ img, .intro-img, .carousel-img {
     padding-right: 10px;
     color: #111;
     font-weight: bold;
-}  
-  
+}
+
 @keyframes fillAnimation {
     to {
       width: var(--fill-width);
     }
-}
-
-.carousel {
-    border: 2px solid #00ffe0;
-    border-radius: 20px;
-    overflow: hidden;
-    background-color: #000;
-    box-shadow: 0 0 15px #00ffe055;
-  }
-  
-.carousel-img {
-    height: 400px;
-    object-fit: cover;
-    opacity: 0.9;
-    filter: grayscale(10%) brightness(90%);
-}
-  
-.carousel-title {
-    color: #00ffe0;
-    font-family: 'Orbitron', sans-serif;
-    font-display: swap;
-    font-size: 2rem;
-    text-shadow: 0 0 10px #00ffe0;
-}
-  
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: #00ffe0;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-}
-  
-.carousel-indicators button {
-    background-color: #00ffe0;
 }
 
 .btn-github {
@@ -304,7 +354,7 @@ img, .intro-img, .carousel-img {
     transition: all 0.3s ease;
     display: inline-block;
 }
-  
+
 .btn-github:hover {
     background-color: #00e0d1;
     color: #000;
@@ -316,7 +366,7 @@ img, .intro-img, .carousel-img {
     padding: 30px 0;
     box-shadow: 0 -2px 10px #00ffe0;
 }
-  
+
 .caia-text {
     color: #bbbbbb;
     font-family: 'Orbitron', sans-serif;
@@ -324,7 +374,7 @@ img, .intro-img, .carousel-img {
     font-size: 1rem;
     text-shadow: 0 0 5px #00ffe0aa;
 }
-  
+
 .footer a {
     color: #00ffe0;
     text-decoration: none;
@@ -332,315 +382,146 @@ img, .intro-img, .carousel-img {
     font-family: 'Orbitron', sans-serif;
     font-display: swap;
 }
-  
+
 .footer a:hover {
     color: #bbbbbb;
     transform: scale(1.05);
 }
-  
+
 .footer i {
     color: #00ffe0;
     transition: transform 0.3s ease;
 }
-  
+
 .footer i:hover {
     transform: rotate(10deg) scale(1.2);
 }
 
-
-
-
 /* --- Media Query per Tablet e Schermi Medi (max-width: 992px) --- */
 @media (max-width: 992px) {
-    /* Navbar per Tablet/Schermi medi */
     .custom-navbar .nav-link {
-        padding: 0.5rem 1.2rem; /* Meno spazio tra i link su tablet */
-        font-size: 0.95rem;     /* Riduci leggermente la dimensione del font */
+        padding: 0.5rem 1.2rem;
+        font-size: 0.95rem;
     }
-
-    /* Home Content (Compattazione e allineamento) */
     .home-content {
-        flex-direction: column; /* Impila gli elementi verticalmente */
-        text-align: center;     /* Centra il testo all'interno del contenitore */
-        padding-top: 80px;      /* Regola il padding in base all'altezza della navbar */
-        min-height: 80vh;       /* Riduci l'altezza minima per compattare */
-        padding-bottom: 30px;   /* Aggiungi un po' di spazio in basso */
-        align-items: flex-start; /* MODIFICATO */
-        justify-content: center; /* Lascia questo se vuoi centrare orizzontalmente, ma potrebbe contribuire al problema */
+        flex-direction: column;
+        text-align: center;
+        padding-top: 80px;
+        min-height: 80vh;
+        padding-bottom: 30px;
+        align-items: center;
+        justify-content: center;
     }
     .intro-title {
-        font-size: 2rem;        /* Adatta la dimensione del titolo */
-        text-align: center;     /* Centra il titolo */
-        margin-bottom: 10px;    /* Riduci il margine inferiore */
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 10px;
     }
     .intro-text {
-        font-size: 1.1rem;      /* Adatta la dimensione del testo */
-        text-align: center;     /* Centra il testo */
-        line-height: 1.4;       /* Compatta l'interlinea */
-        margin-bottom: 15px;    /* Riduci il margine inferiore */
+        font-size: 1.1rem;
+        text-align: center;
+        line-height: 1.4;
+        margin-bottom: 15px;
     }
     .intro-img {
-        margin: 20px auto;      /* Centra l'immagine e aggiungi un po' di margine */
-        max-width: 80%;         /* L'immagine non occupa tutta la larghezza per non essere troppo grande */
-        height: auto;           /* Assicura che l'altezza si adatti */
+        margin: 20px auto;
+        max-width: 80%;
+        height: auto;
     }
-
-    /* Sezioni Generiche (Compattazione generale e spazi vuoti) */
     .section {
-        min-height: unset; /* CRUCIALE: Permetti alle sezioni di adattarsi al contenuto */
-        padding-top: 60px; /* Padding in alto per separare dalla sezione precedente */
-        padding-bottom: 40px; /* Padding in basso per separare dalla sezione successiva */
-        padding-left: 20px;
-        padding-right: 20px;
-        justify-content: flex-start; /* MODIFICATO */
+        min-height: unset;
+        padding-top: 60px;
+        padding-bottom: 40px;
+        justify-content: flex-start;
     }
     .section h1,
     .section-title {
-        font-size: 2.5rem;      /* Adatta i titoli delle sezioni */
-        margin-bottom: 1.5rem;  /* Aggiungi un margine inferiore ai titoli di sezione */
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
     }
-
-    /* About Section */
-    .about-text {
-        text-align: justify; /* Mantenuto justify, ma cambieremo per smartphone */
-        font-size: 1rem;     /* Riduci dimensione font per leggibilità */
-        line-height: 1.5;    /* Riduci l'interlinea per compattare il testo */
-    }
-    .about-box {
-        padding: 20px;       /* Riduci il padding interno del box About Me */
-    }
-
-    /* Skills Section (Ripristino animazioni e allineamento) */
+    .projects-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+      .project-card {
+        width: 90%;
+      }
+    }  
     .skill-item {
-        flex-direction: column;   /* Impila gli elementi delle skill */
-        align-items: center;      /* Centra gli elementi delle skill */
-        margin-bottom: 1rem;      /* Spazio tra i singoli item skill */
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1rem;
     }
-    .skill-item > span:first-child, /* Riferimento all'etichetta di testo della skill */
-    .skill-percent {             /* La percentuale di testo */
-        width: 100%;             /* Fai in modo che occupino tutta la larghezza disponibile */
-        text-align: center;      /* Centra il testo della skill label/percentuale */
-        margin-bottom: 5px;      /* Spazio tra etichetta e barra */
+    .skill-item > span:first-child,
+    .skill-percent {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5px;
     }
     .skill-bar {
-        width: 90%;              /* Le barre stesse possono essere leggermente più strette del 100% per un effetto migliore */
-        margin: 5px auto;        /* Centra la barra di progresso */
+        width: 90%;
+        margin: 5px auto;
     }
-    /* Ripristina animazione skill-fill e larghezza variabile */
     .skill-fill {
-        animation: fillAnimation 1.5s forwards ease-in-out; /* Riabilita l'animazione */
-        width: var(--fill-width);                           /* Usa la variabile per la larghezza */
+        animation: fillAnimation 1.5s forwards ease-in-out;
+        width: var(--fill-width);
     }
-
     .btn-github {
-        width: 70%;           /* Bottone GitHub più stretto */
-        margin: 20px auto;    /* Centra il bottone e aggiungi un po' di margine */
-        display: block;       /* Rendi il bottone un blocco per centrarlo con margin:auto */
+        width: 70%;
+        margin: 20px auto;
+        display: block;
         text-align: center;
     }
-
-    /* Carousel Project */
-    .carousel-img {
-        height: 300px; /* Altezza media per le immagini del carosello */
-    }
-    .carousel-title {
-        font-size: 1.8rem;
-    }
-}
 
 
 /* --- Media Query per Smartphone (max-width: 576px) --- */
 @media (max-width: 576px) {
-    /* Navbar per Smartphone */
     .custom-navbar .nav-link {
-        padding: 0.3rem 0.5rem; /* Ancora meno spazio tra i link su smartphone */
-        font-size: 0.75rem;     /* Riduci ulteriormente la dimensione del font */
-        min-width: unset;       /* Assicurati che non ci siano width minime che lo bloccano */
+        padding: 0.3rem 0.5rem;
+        font-size: 0.75rem;
     }
-    /* Forza la visualizzazione della navbar su mobile in caso di sovrascritture */
     .navbar-collapse {
         display: flex !important;
         justify-content: center;
     }
-
-    /* Home Content (Smartphone - ulteriore compattazione) */
     .home-content {
-        padding-top: 50px; /* Ancora meno padding top */
-        padding-bottom: 15px; /* Compattiamo il padding inferiore */
-        min-height: unset; /* Assicurati che non ci sia altezza minima forzata */
-        align-items: flex-start; /* MODIFICATO */
-        justify-content: center; /* Puoi lasciare questo se il problema non è qui */
-    }
-    .intro-title {
-        font-size: 1.6rem;
-    }
-    .intro-text {
-        font-size: 0.9rem;
-        line-height: 1.3; /* Interlinea più stretta su schermi molto piccoli */
-    }
-    .intro-img {
-        max-width: 95%; /* L'immagine può essere un po' più grande, quasi a bordo */
-    }
-
-    /* Sezioni Generiche (Smartphone - ulteriore compattazione) */
-    .section {
-        padding-top: 50px; /* Riduci ulteriormente il padding top della sezione */
-        padding-bottom: 25px; /* Riduci ulteriormente il padding bottom */
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-top: 50px;
+        padding-bottom: 15px;
+        min-height: unset;
+        align-items: flex-start;
         justify-content: center;
     }
-    .section h1,
-    .section-title {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-    }
-
-    /* About Section (Smartphone) */
-    .about-text {
-        text-align: left; /* Su smartphone, è spesso meglio left-aligned per leggibilità */
-        font-size: 0.9rem; /* Riduci ancora un po' il testo */
-        line-height: 1.4;
-    }
-    .about-box {
-        padding: 10px; /* Ancora meno padding interno al box */
-    }
-
-
-    /* Skills Section (Smartphone) */
-    .skill-item {
-        margin-bottom: 0.7rem; /* Spazio leggermente più ridotto */
-    }
-    .skill-category {
-        padding: 10px; /* Riduci il padding della categoria skill */
-        margin-bottom: 15px; /* Meno spazio tra le categorie skill */
-    }
-    .category-title {
-        font-size: 1.1rem; /* Titolo categoria più piccolo */
-    }
-    /* Footer (Smartphone) */
-    .footer {
-        padding: 15px 0;
-        text-align: center;
-        font-size: 0.8rem;
-    }
-    /* Carousel Project */
-    .carousel-img {
-        height: 220px; /* Altezza ancora più ridotta per le immagini del carosello */
-      }
-    .carousel-caption {
-        bottom: 0; /* Regola la posizione per mobile */
-        left: 0;
-        right: 0;
-        padding: 10px; /* Riduci il padding */
-    }
-
-    .carousel-title {
-        font-size: 1rem; /* Riduci la dimensione del titolo */
-    }
-
-    .btn-github {
-        padding: 8px 15px; /* Riduci il padding del bottone */
-        font-size: 0.9rem; /* Riduci la dimensione del font del bottone */
-    }
+    .intro-title { font-size: 1.6rem; }
+    .intro-text { font-size: 0.9rem; line-height: 1.3; }
+    .intro-img { max-width: 95%; }
+    .section { padding-top: 50px; padding-bottom: 25px; padding-left: 10px; padding-right: 10px; justify-content: center; }
+    .section h1, .section-title { font-size: 2rem; margin-bottom: 1rem; }
+    .about-text { font-size: 0.9rem; line-height: 1.4; max-width: 280px; text-align: left; margin-left:auto; margin-right:auto; }
+    .about-box { padding: 10px; }
+    .glow { font-size: 1.5rem; }
+    .skill-label { font-size: 0.8rem; }
+    .progress { height: 20px; }
+    .progress-bar { font-size: 0.8rem; }
+    .btn-github { padding: 8px 15px; font-size: 0.9rem; }
+    .footer { padding: 15px 0; text-align: center; font-size: 0.8rem; }
 }
 
-/* Media query per schermi molto piccoli, come iPhone 4/5/SE */
+/* --- Media query per schermi molto piccoli (max-width: 375px) --- */
 @media (max-width: 375px) {
-    /* Regole specifiche per questi schermi */
-    /* Navbar */
-    .custom-navbar .nav-link {
-        font-size: 0.7rem !important; /* Riduci ulteriormente la dimensione dei link della navbar */
-        padding: 0.3rem 0.5rem !important; /* Riduci il padding */
-    }
-
-    /* Sezioni generali (home-content e section) */
-    .home-content, .section {
-        padding-top: 30px; /* Riduci il padding verticale */
-        padding-bottom: 30px;
-    }
-
-    /* Titoli delle sezioni */
-    .intro-title, .section-title {
-        font-size: 2rem; /* Riduci la dimensione dei titoli principali */
-        margin-bottom: 15px; /* Spazio sotto i titoli */
-    }
-
-    /* Testo introduttivo (Home) */
-    .intro-text {
-        font-size: 0.9rem; /* Riduci la dimensione del testo intro */
-    }
-
-    /* Immagine Intro */
-    .intro-img {
-        max-width: 80%; /* Assicurati che l'immagine non sia troppo grande */
-        margin-top: 20px; /* Spazio sopra l'immagine */
-    }
-
-    /* Sezione About Me */
-    .about-box {
-        padding: 15px; /* Riduci il padding del box About Me */
-    }
-    .about-text {
-        font-size: 0.9rem; /* Riduci la dimensione del testo About Me */
-        line-height: 1.6; /* Mantieni una buona altezza di linea */
-        max-width: 280px; /* Limita ulteriormente la larghezza del testo per iPhone 4 */
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    /* Sezione Skills - Titoli categoria */
-    .glow {
-        font-size: 1.5rem; /* Riduci i titoli delle categorie Skills */
-    }
-    .skill-label {
-        font-size: 0.8rem; /* Riduci la label della skill */
-    }
-    .progress {
-        height: 20px; /* Riduci l'altezza della barra di progresso */
-    }
-    .progress-bar {
-        font-size: 0.8rem; /* Riduci il testo nella barra di progresso */
-    }
-
-    /* Regolazioni specifiche per il Carousel della sezione Work */
-
-    .carousel-img {
-        height: 180px; /* Potrebbe essere necessario ridurre ancora un po' l'altezza dell'immagine, prova con 140px o 150px */
-        object-fit: cover; /* Assicurati che l'immagine copra lo spazio senza distorcere */
-    }
-
-    .carousel-caption {
-        padding: 5px 10px; /* Riduci ulteriormente il padding interno della caption */
-        /* Assicurati che 'display: flex', 'flex-direction: column', 'justify-content: flex-end', 'align-items: center' siano attivi qui */
-        /* Puoi aggiungere un'altezza minima se il contenuto è troppo poco, ma solitamente unset è meglio */
-        min-height: unset; /* per evitare che si estenda troppo se il contenuto è poco */
-    }
-
-    .carousel-title {
-        font-size: 1rem; /* Mantiene la dimensione del titolo, forse leggermente più grande del testo */
-        margin-bottom: 2px; /* Riduci il margine tra titolo e descrizione */
-    }
-
-    .btn-github {
-        padding: 5px 10px; /* Riduci ulteriormente il padding del bottone per renderlo più piccolo */
-        font-size: 0.7rem; /* Riduci il font del bottone */
-        /* Rimuovi ogni margin-top che potrebbe creare spazio inutile sopra il bottone */
-        margin-top: 0;
-    }
-
-    /* Regola le frecce di navigazione se troppo grandi */
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-        width: 25px; /* Riduci la dimensione delle frecce */
-        height: 25px;
-    }
-
-    /* Potresti voler spostare le frecce un po' più all'interno se toccano i bordi */
-    .carousel-control-prev, .carousel-control-next {
-        width: 10%; /* Riduci l'area cliccabile delle frecce */
-    }
+    .custom-navbar .nav-link { font-size: 0.7rem !important; padding: 0.3rem 0.5rem !important; }
+    .home-content, .section { padding-top: 30px; padding-bottom: 30px; }
+    .intro-title, .section-title { font-size: 2rem; margin-bottom: 15px; }
+    .intro-text { font-size: 0.9rem; }
+    .intro-img { max-width: 80%; margin-top: 20px; }
+    .about-box { padding: 15px; }
+    .about-text { font-size: 0.9rem; line-height: 1.6; max-width: 280px; margin-left:auto; margin-right:auto; }
+    .glow { font-size: 1.5rem; }
+    .skill-label { font-size: 0.8rem; }
+    .progress { height: 18px; }
+    .progress-bar { font-size: 0.75rem; }
+    .btn-github { padding: 5px 10px; font-size: 0.7rem; margin-top:0; }
 }
+
 
 
 

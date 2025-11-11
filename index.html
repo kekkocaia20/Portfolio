@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,225 +11,271 @@
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar custom-navbar">
+<!-- Navbar -->
+<nav class="navbar custom-navbar">
     <div class="container">
         <div class="navbar-collapse show justify-content-center" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#aboutMe">1. About Me</a>
+                    <a class="nav-link" href="#projects">1. Projects</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#skills">2. Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#work">3. Work</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
 
-
-  <!-- Contenuto Home -->
-  <div class="home-content d-flex align-items-center">
+<!-- Contenuto Home -->
+<div class="home-content d-flex align-items-center">
     <div class="container">
-      <div class="row align-items-center justify-content-center">
-        <!-- Testo a sinistra -->
-        <div class="col-md-6 text-md-start text-center">
-          <h1 class="intro-title">Ciao, sono Francesco</h1>
-          <p class="intro-text">
-            Sviluppatore full stack appassionato di tecnologie web moderne. Creo interfacce semplici, funzionali e performanti, integrando back-end solido con front-end intuitivo. Amo trasformare idee in esperienze digitali di qualità.
-          </p>
+        <div class="row align-items-center justify-content-center">
+            <!-- Testo a sinistra -->
+            <div class="col-md-6 text-md-start text-center">
+                <h1 class="intro-title">Ciao, sono Francesco</h1>
+                <p class="intro-text">
+                    Sviluppatore full stack appassionato di tecnologie web moderne. Creo interfacce semplici, funzionali e performanti, integrando back-end solido con front-end intuitivo. Amo trasformare idee in esperienze digitali di qualità.
+                </p>
+            </div>
+            <!-- Immagine a destra -->
+            <div class="col-md-6 text-center">
+                <img src="img/home.jpg" alt="Francesco Caianiello" class="intro-img">
+            </div>
         </div>
-        <!-- Immagine a destra -->
-        <div class="col-md-6 text-center">
-          <img src="img/home.jpg" alt="Francesco Caianiello" class="intro-img">
-        </div>
-      </div>
     </div>
+</div>
+
+<!-- Sezione About Me -->
+<section id="projects" class="section">
+  <h1 class="section-title">PROJECTS</h1>
+
+  <!-- Filtri -->
+  <div class="filter-buttons">
+    <button class="filter-btn active" data-filter="all">Tutti</button>
+    <button class="filter-btn" data-filter="frontend">Frontend</button>
+    <button class="filter-btn" data-filter="fullstack">Full Stack</button>
   </div>
 
-  <!-- Sezioni -->
-  <section id="aboutMe" class="section">
-    <h1 class="section-title">1. About Me</h1>
-  <div class="about-box">
-    <p class="about-text">
-    Mi chiamo Francesco Caianiello e sono un Full Stack Developer. Sono una persona curiosa, determinata e innamorata della tecnologia.
-    Il mio viaggio nel mondo del codice non è iniziato in un'aula universitaria, ma da una voglia genuina di creare e costruire soluzioni che possano fare la differenza.
-    Per me scrivere codice non è solo un lavoro: è una forma di espressione. Ogni progetto è una sfida e un'occasione per imparare.
-    Quando non sono davanti al computer, amo passare serate con gli amici, praticare e discutere di sport, e dedicarmi ai miei hobby come i videogame e la musica.
-    Nel lavoro, mi impegno per essere trasparente, ascoltare le esigenze e offrire soluzioni funzionali e di qualità. Non cerco scorciatoie e punto sempre all'eccellenza.
-  </div>
-  </section>
+  <!-- Griglia Progetti -->
+  <div class="projects-grid">
 
+    <div class="project-card" data-category="frontend">
+      <img src="img/project1.jpg" alt="Project 1">
+      <h3>Portfolio</h3>
+      <p>Portfolio personale responsive con design moderno e animazioni fluide.</p>
+      <a href="https://github.com/kekkocaia20/Portfolio" target="_blank" class="btn-github">GitHub</a>
+    </div>
+    
+    <div class="project-card" data-category="fullstack">
+      <img src="img/project2.jpg" alt="Project 2">
+      <h3>F1</h3>
+      <p>Sito web interattivo con dati sulle corse e statistiche dei piloti in tempo reale.</p>
+      <a href="https://github.com/kekkocaia20/f1" target="_blank" class="btn-github">GitHub</a>
+    </div>
+    
+    <div class="project-card" data-category="fullstack">
+      <img src="img/project3.jpg" alt="Project 3">
+      <h3>Arcade Neapolitan</h3>
+      <p>Gioco web arcade con logica back-end per salvataggio punteggi.</p>
+      <a href="https://github.com/kekkocaia20/ARCADE_NEAPOLITAN" target="_blank" class="btn-github">GitHub</a>
+    </div>
+    
+    <div class="project-card" data-category="fullstack">
+      <img src="img/project4.jpg" alt="Project 4">
+      <h3>Anagrafica Muletti</h3>
+      <p>Applicazione gestionale per registrare e monitorare muletti a scopo aziendale.</p>
+      <a href="https://github.com/kekkocaia20/muletti_ggroup" target="_blank" class="btn-github">GitHub</a>
+    </div>
+    
+    <div class="project-card" data-category="frontend">
+      <img src="img/project5.jpg" alt="Project 5">
+      <h3>RG Petroleum</h3>
+      <p>Sito aziendale con interfaccia moderna ottimizzato per mobile e desktop.</p>
+      <a href="https://github.com/kekkocaia20/rg_petroleum" target="_blank" class="btn-github">GitHub</a>
+    </div>
+    
+    <div class="project-card" data-category="fullstack">
+      <img src="img/project6.jpg" alt="Project 6">
+      <h3>restfulLogin</h3>
+      <p>Sistema di autenticazione RESTful con login e registrazione.</p>
+      <a href="https://github.com/kekkocaia20/restfulLogin" target="_blank" class="btn-github">GitHub</a>
+    </div>    
 
-  <section id="skills" class="section">
-    <h1 class="section-title">2. Skills</h1>
-
-  <div class="container text-white">
-    <!-- Front End -->
-    <h3 class="text-center mt-4 glow">Front End</h3>
-    <div class="mb-3">
-      <label class="skill-label">HTML</label>
-      <div class="progress">
-        <div class="progress-bar bg-info" style="width: 80%">80%</div>
-      </div>
-    </div>
-    <div class="mb-3">
-      <label class="skill-label">CSS</label>
-      <div class="progress">
-        <div class="progress-bar bg-info" style="width: 80%">80%</div>
-      </div>
-    </div>
-    <div class="mb-3">
-      <label class="skill-label">JavaScript</label>
-      <div class="progress">
-        <div class="progress-bar bg-info" style="width: 65%">65%</div>
-      </div>
-    </div>
-    <div class="mb-3">
-      <label class="skill-label">Bootstrap</label>
-      <div class="progress">
-        <div class="progress-bar bg-info" style="width: 80%">80%</div>
-      </div>
-    </div>
-
-    <!-- Back End -->
-    <h3 class="text-center mt-5 glow">Back End</h3>
-    <div class="mb-3">
-      <label class="skill-label">Java</label>
-      <div class="progress">
-        <div class="progress-bar bg-success" style="width: 70%">70%</div>
-      </div>
-    </div>
-    <div class="mb-3">
-      <label class="skill-label">Spring</label>
-      <div class="progress">
-        <div class="progress-bar bg-success" style="width: 55%">55%</div>
-      </div>
-    </div>
-    <div class="mb-3">
-      <label class="skill-label">Python</label>
-      <div class="progress">
-        <div class="progress-bar bg-success" style="width: 70%">70%</div>
-      </div>
-    </div>
-    <div class="mb-3">
-      <label class="skill-label">Flask</label>
-      <div class="progress">
-        <div class="progress-bar bg-success" style="width: 50%">50%</div>
-      </div>
-    </div>
-    <div class="mb-3">
-      <label class="skill-label">PHP</label>
-      <div class="progress">
-        <div class="progress-bar bg-success" style="width: 60%">60%</div>
-      </div>
-    </div>
-
-    <!-- Database -->
-    <h3 class="text-center mt-5 glow">Database</h3>
-    <div class="mb-3">
-      <label class="skill-label">MySQL</label>
-      <div class="progress">
-        <div class="progress-bar bg-warning" style="width: 70%">70%</div>
-      </div>
-    </div>
-    <div class="mb-3">
-      <label class="skill-label">PostgreSQL</label>
-      <div class="progress">
-        <div class="progress-bar bg-warning" style="width: 50%">50%</div>
-      </div>
-    </div>
-
-    <!-- DevOps / Tools -->
-    <h3 class="text-center mt-5 glow">DevOps / Tools</h3>
-    <div class="mb-3">
-      <label class="skill-label">Git / GitHub</label>
-      <div class="progress">
-        <div class="progress-bar bg-danger" style="width: 80%">80%</div>
-      </div>
-    </div>
-    <div class="mb-3">
-      <label class="skill-label">Docker</label>
-      <div class="progress">
-        <div class="progress-bar bg-danger" style="width: 60%">60%</div>
-      </div>
-    </div>
-    <div class="mb-3">
-      <label class="skill-label">MAMP / XAMPP</label>
-      <div class="progress">
-        <div class="progress-bar bg-danger" style="width: 70%">70%</div>
-      </div>
-    </div>
   </div>
 </section>
 
 
-  <section id="work" class="section">
-    <h1 class="section-title">3. Work</h1>
+<!-- Sezione Skills -->
+<section id="skills" class="section">
+    <h1 class="section-title">SKILLS</h1>
 
-    <div id="carouselExampleCaptions" class="carousel slide carousel-dark" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></button>
-      </div>
-  
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="img/arcade.jpg" class="d-block w-100 carousel-img" alt="Project 1">
-          <div class="carousel-caption d-md-block">
-            <h5 class="carousel-title">Project One</h5>
-            <a href="https://github.com/kekkocaia20/ARCADE_NEAPOLITAN" target="blank" class="btn-github">View on GitHub</a>
-          </div>
+    <div class="container text-white">
+        <!-- Front End -->
+        <h3 class="text-center mt-4 glow">Front End</h3>
+        <div class="mb-3">
+            <label class="skill-label">HTML</label>
+            <div class="progress">
+                <div class="progress-bar bg-info" style="width: 80%"></div>
+            </div>
         </div>
-        <div class="carousel-item">
-          <img src="img/barber.jpg" class="d-block w-100 carousel-img" alt="Project 2">
-          <div class="carousel-caption d-md-block">
-            <h5 class="carousel-title">Project Two</h5>
-            <a href="https://github.com/kekkocaia20/restfulBarber" target="blank" class="btn-github">View on GitHub</a>
-          </div>
+        <div class="mb-3">
+            <label class="skill-label">CSS</label>
+            <div class="progress">
+                <div class="progress-bar bg-info" style="width: 80%"></div>
+            </div>
         </div>
-        <div class="carousel-item">
-          <img src="img/cicciodb.jpg" class="d-block w-100 carousel-img" alt="Project 3">
-          <div class="carousel-caption d-md-block">
-            <h5 class="carousel-title">Project Three</h5>
-            <a href="https://github.com/kekkocaia20/restfulLogin" target="blank" class="btn-github">View on GitHub</a>
-          </div>
+        <div class="mb-3">
+            <label class="skill-label">JavaScript</label>
+            <div class="progress">
+                <div class="progress-bar bg-info" style="width: 60%"></div>
+            </div>
         </div>
-      </div>
-  
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </button>
+        <div class="mb-3">
+            <label class="skill-label">Bootstrap</label>
+            <div class="progress">
+                <div class="progress-bar bg-info" style="width: 80%"></div>
+            </div>
+        </div>
+
+        <!-- Back End -->
+        <h3 class="text-center mt-5 glow">Back End</h3>
+        <div class="mb-3">
+            <label class="skill-label">Java</label>
+            <div class="progress">
+                <div class="progress-bar bg-success" style="width: 60%"></div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="skill-label">Spring</label>
+            <div class="progress">
+                <div class="progress-bar bg-success" style="width: 50%"></div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="skill-label">Python</label>
+            <div class="progress">
+                <div class="progress-bar bg-success" style="width: 70%"></div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="skill-label">Flask</label>
+            <div class="progress">
+                <div class="progress-bar bg-success" style="width: 50%"></div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="skill-label">PHP</label>
+            <div class="progress">
+                <div class="progress-bar bg-success" style="width: 70%"></div>
+            </div>
+        </div>
+
+        <!-- Database -->
+        <h3 class="text-center mt-5 glow">Database</h3>
+        <div class="mb-3">
+            <label class="skill-label">MySQL</label>
+            <div class="progress">
+                <div class="progress-bar bg-warning" style="width: 80%"></div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="skill-label">PostgreSQL</label>
+            <div class="progress">
+                <div class="progress-bar bg-warning" style="width: 50%"></div>
+            </div>
+        </div>
+
+        <!-- DevOps / Tools -->
+        <h3 class="text-center mt-5 glow">DevOps / Tools</h3>
+        <div class="mb-3">
+            <label class="skill-label">Git / GitHub</label>
+            <div class="progress">
+                <div class="progress-bar bg-danger" style="width: 80%"></div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="skill-label">Docker</label>
+            <div class="progress">
+                <div class="progress-bar bg-danger" style="width: 50%"></div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="skill-label">MAMP / XAMPP</label>
+            <div class="progress">
+                <div class="progress-bar bg-danger" style="width: 70%"></div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="skill-label">Amazon Web Service</label>
+            <div class="progress">
+                <div class="progress-bar bg-danger" style="width: 50%"></div>
+            </div>
+        </div>
     </div>
-  </section>
+</section>
 
-  <!-- Footer -->
+<!-- Footer -->
 <footer class="footer">
-  <div class="container text-center">
-    <p class="caia-text">&copy; 2025 Francesco Caianiello. Tutti i diritti riservati.</p>
-    <div class="social-icons d-flex justify-content-center gap-4 mt-3">
-      <!-- GitHub -->
-      <a href="https://github.com/kekkocaia20" target="_blank" class="text-white d-flex align-items-center gap-2">
-        <i class="fab fa-github fa-lg"></i>
-        <span class="caia-text">GitHub</span>
-      </a>
-      <!-- LinkedIn -->
-      <a href="https://www.linkedin.com/in/francesco-caianiello-065525197/" target="_blank" class="text-white d-flex align-items-center gap-2">
-        <i class="fab fa-linkedin fa-lg"></i>
-        <span class="caia-text">LinkedIn</span>
-      </a>
+    <div class="container text-center">
+        <p class="caia-text">&copy; 2025 Francesco Caianiello. Tutti i diritti riservati.</p>
+        <div class="social-icons d-flex justify-content-center gap-4 mt-3">
+            <!-- GitHub -->
+            <a href="https://github.com/kekkocaia20" target="_blank" class="text-white d-flex align-items-center gap-2">
+                <i class="fab fa-github fa-lg"></i>
+                <span class="caia-text">GitHub</span>
+            </a>
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/francesco-caianiello-065525197/" target="_blank" class="text-white d-flex align-items-center gap-2">
+                <i class="fab fa-linkedin fa-lg"></i>
+                <span class="caia-text">LinkedIn</span>
+            </a>
+        </div>
     </div>
-  </div>
 </footer>
 
-
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const filterBtns = document.querySelectorAll(".filter-btn");
+  const projectCards = document.querySelectorAll(".project-card");
+  
+  filterBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      // Aggiorna lo stato attivo dei pulsanti
+      filterBtns.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+  
+      const category = btn.getAttribute("data-filter");
+  
+      projectCards.forEach((card, index) => {
+        // reset animazioni
+        card.classList.remove("show");
+  
+        const match = category === "all" || card.getAttribute("data-category") === category;
+  
+        if (match) {
+          // mostra la card
+          card.style.display = "block";       // torna visibile
+          card.style.position = "relative";   // rimette nel flusso
+          card.classList.remove("hidden", "hide");
+  
+          // animazione sequenziale
+          setTimeout(() => {
+            card.classList.add("show");
+          }, index * 150);
+        } else {
+          // nasconde la card con animazione
+          card.classList.remove("show");
+          card.classList.add("hide");
+  
+          setTimeout(() => {
+            card.style.display = "none";     // rimuove dal layout
+            card.style.position = "absolute"; // fuori dal flusso
+          }, 400); // 400ms corrisponde alla durata dell'animazione
+        }
+      });
+    });
+  });
+</script>  
 </body>
 </html>
