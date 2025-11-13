@@ -246,6 +246,7 @@ img, .intro-img {
 
 .skill-label {
     color: #bbbbbb;
+    text-shadow: 0 0 10px #00ffe0, 0 0 20px #00ffe0;
     font-family: 'Orbitron', sans-serif;
     font-display: swap;
     font-size: 1rem;
@@ -349,7 +350,7 @@ img, .intro-img {
     color: #111827;
     font-weight: bold;
     border-radius: 25px;
-    box-shadow: 0 0 10px #00ffe0, 0 0 20px #00ffe0aa;
+    box-shadow: 0 0 5px #00ffe0, 0 0 10px #00ffe0aa;
     text-decoration: none;
     transition: all 0.3s ease;
     display: inline-block;
@@ -358,7 +359,7 @@ img, .intro-img {
 .btn-github:hover {
     background-color: #00e0d1;
     color: #000;
-    box-shadow: 0 0 15px #00ffe0, 0 0 25px #00ffe0aa;
+    box-shadow: 0 0 10px #00ffe0, 0 0 15px #00ffe0aa;
 }
 
 .footer {
